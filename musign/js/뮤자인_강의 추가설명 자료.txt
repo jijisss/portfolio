@@ -1,0 +1,220 @@
+
+
+가. 풀페이지 스크린캡쳐 파일
+ - https://chrome.google.com/webstore/search/image%20downloader
+ - https://chrome.google.com/webstore/search/full%20page%20screen
+
+
+나. 리니어아이콘 웹폰트사용
+ - https://linearicons.com > 상단 Free Version 페이지로 이동
+ - 사용할 아이콘 선택 후 더블클릭
+ - html코드 body영역에 붙임 (예 : <span class="lnr lnr-italic"></span>)
+ - css.CDN 링크시킬 것  <link rel="stylesheet" href="https://cdn.linearicons.com/free/1.0.0/icon-font.min.css">
+
+
+다. 폰트어썸 사용법 
+ - 무료폰트 경로 : https://fontawesome.com/v4.7.0/icons/
+ - font폴더와 css폴더에  font-awewome.min.css를 넣는다.
+ - head영역에 링크 <link rel="stylesheet" href="css/font-awesome.min.css">
+
+
+라. reset파일
+@charset "utf-8";
+
+/* reset */
+* {margin: 0;padding: 0;}
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, font, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, tbody, tfoot, thead, tr, th, td{margin:0;padding:0;}
+h1, h2, h3, h4, h5, h6 {font-weight: 700; font-size: inherit;}
+a {color: inherit; text-decoration: inherit;}
+img {vertical-align: middle;}
+a img {border: none;}
+li {list-style: none;}
+address, em, i {font-style: normal;}
+a:focus {outline: none}
+button:focus {outline: none}
+
+마. 'a'클릭했을때 위로 튕기는 이벤트제거
+$(document).on('click', 'a[href="#"]', function(e){
+    e.preventDefault();
+});
+
+바. scroll.js적용법
+ - 먼저 js폴더에 scrolla.js파일 저장
+ - html > head 부분에 작성
+     예)
+     <script src="js/jquery-3.3.1.min.js"></script>
+     <script src="js/scrolla.jquery.min.js"></script> 
+
+ - body부분 애니메이션 줄 부분에  .animate클래스 넣고data-animate="motion" 작성
+ - js폴더에 script.js파일 만든다.
+ - html > head 영역에 link건다.
+   예)<script src="js/script.js"></script>
+
+ - script.js에 아래 스크립트 작성
+   예)$(function() {
+	$('.animate').scrolla({
+		mobile: true, //모바일버전시 활성화
+		once: false //스크롤시 딱 한번만 하고싶을땐 true
+	});    
+      }); 
+
+
+- scrolla.js가 잘 삽입되었는지 개발자 도구(F12)에서 확인
+- css 파일에 애니메이션 적용하는 부분에 .motion클래스붙임.
+
+* 찾고 싶은 부분을 드래그하여 복사한 후  Ctrl + F 에 붙여놓고 => Ctrl + H 에서 변경내용 작성 하고 일괄변경 누름
+
+
+사. fixheader 스크립트 적용
+- script.js파일에 스크립트 작성
+  
+ var scrollValue = 0;
+scrollValue = $(document).scrollTop(); 
+fixHeader();
+
+$(window).on('scroll resize', function(){
+   scrollValue = $(document).scrollTop(); 
+   fixHeader();
+});
+
+function fixHeader(){
+    if(scrollValue > 200) {
+        $('header').addClass('on');
+    }else {$('header').removeClass('on');}
+}
+
+ - 개발자에서 header에 'on'클래스가 붙었는지 확인
+ - css파일로 이동해서 'on'클래스가 붙을 때 상황을 작성
+
+
+아. 이미지슬라이드 적용법
+- css폴더에 slick.css를 넣고, js폴더에 slick.min.js를 넣는다.
+- html > head영역에..링크를 건다
+  예)
+     <link rel="stylesheet" href="css/slick.css">
+     <script src="js/jquery-3.3.1.min.js"></script>
+     <script src="js/slick.min.js"></script>
+
+- body부분 수정
+  레이아웃 작성 때 ul> li에 하나만 작성한 것을 보여질 슬라이드 갯수에 맞게 수정
+
+- script.js파일 수정
+  $(function() {
+    $(".visual .slide").slick({ 
+        arrows: false, //화살표 사용안함
+        dots: true, //닷츠
+        autoplay: true, //자동재생
+        fade: true, //페이드인 효과        
+        autoplaySpeed: 5000, //재생시간
+        pauseOnHover:false, //마우스 오버시 슬라이드 멈춤 해제
+		pauseOnFocus:false //포커스시 슬라이드 멈춤 해제
+    });
+}); 
+ 
+자. SVG애니메이션.
+1.일러스트로 동그라미를 만듬
+2.동그라미툴로 stroke로 제작하여 추가적으로 패스점을 4개 추가
+3.저장할 때 확장자를  .SVG로 저장
+4.브라켓에서 열어보면 SVG코드볼수있음. 우리는 첨부된 메모장에 있는 소스를 붙여넣음.
+  - <div class= "circleBox"></div>안에다 붙여넣음  =>F5로 확인할 것
+  - <path fill="none" stroke="#F5F5F5" stroke-width="25" stroke-miterlimit="10"> 
+    =>부분은 css에서 작성함으로 지우고 저장하고 확인
+
+ 예)
+<svg class="svgAni" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+             width="700px" height="700px" viewBox="0 0 523.421 523.104" enable-background="new 0 0 523.421 523.104"
+             xml:space="preserve">
+            <path d="M510.844,261.637
+                c0,69.277-28.291,131.946-73.95,177.084c-44.978,44.464-106.809,71.916-175.05,71.916c-55.662,0-107.058-18.264-148.522-49.125
+                C52.343,416.126,12.843,343.494,12.843,261.637c0-56.924,19.102-109.387,51.245-151.329
+                c45.509-59.381,117.161-97.671,197.755-97.671c70.752,0,134.612,29.51,179.944,76.893
+                C484.565,134.242,510.844,194.871,510.844,261.637z"/>
+           </svg>
+  						
+5.<section class="team">
+     <div class= "circleBox"></div>
+  </section>
+  => 에도 붙여줄것
+
+6.width= "700px"와 height ="700px"로 저장
+
+7.서클의 모양과 위치를 잡기위해 css로 이동
+ 예) circleBox .svgAni path {fill:none; stroke: #f5f5f5; stroke-width: 25; }에 작성
+   => 포지션으로 위치를 잡아준다.
+
+8.path의 총 길이를 구하기 위해 script작성
+ 예)
+ //2.circleBox SVG길이 구하기
+$(function(){
+    $('.svgAni').find('path').each(function(i, path){
+        var length = path.getTotalLength();
+        //alert(length);  
+    });
+});
+
+9.css에서 길이값과 시작점 작성
+- path의 시작점  => /  stroke-dashoffset 은 시작점
+- stroke-dasharray 는 스트록점선의 배열 .
+ 예) circleBox .svgAni path {fill:none; stroke: #f5f5f5; stroke-width: 25; stroke-dasharray:1564;  stroke-dashoffset: 0;  }에 작성
+
+10.scrolla.js링크걸고 script작성
+ - scrolla.jquery.min.js 를 js폴더에 추가
+ - <script src="js/scrolla.jquery.min.js"></script> 연결
+
+예)
+//스크롤애니메이션
+$(function(){
+   $('.animate').scrolla({
+       mobile: true,  //모바일버전시 활성화
+       once: true //스크롤시 딱 한번만 하고 싶을 땐 true
+   });
+});
+
+11.html에 .animate클래스와 " data-animate="motion"작성
+예)
+<class="animate" data-animate="motion">
+
+12. css에서 애니메이션 작성
+예)
+.circleBox.motion .svgAni path {animation-name : dash; animation-duration: 1.5s;}
+@keyframes dash {
+    0% {stroke-dashoffset: 1564;}
+    100%{stroke-dashoffset: 0;}
+}
+
+13. circle의 시작점 회전
+.circleBox  {display: block; transform: rotate(-90deg);} 
+
+
+
+
+차) 반응형제작 전
+- html > head영역에 붙여줌
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=0, maximum-scale=1.0">
+     initial-scale=1.0 : 처음 페이지 로딩시 확대/ 축소되지 않은 원래크기를 사용
+     width=device-width : 페이지 너비를 기기의 스크린 너비로 설정, 즉 렌더링 영역을 기기의 뷰포트 크기와 같게 만들어줌  
+      minimum-scale=0 : 줄일 수 있는 최소 크기를 지정. 0~10사이값을 가짐
+     maximum-scale=1.0 : 늘릿릴 수 있는 최대값 지정. 0~10사이값을 가짐
+
+ 
+카) 모바일 네비 스크립트작성
+
+  - header nav.on작성
+  - script.js에 스크립트 작성
+
+  예)
+  $(function() {
+    $('header .open').on('click', function() {
+        $('body').css({'overflow': 'hidden'});   //스크롤하지 못하게 막음
+        $('header .bg').css({'display': 'block'});
+        $('header nav').addClass('on');
+	});
+    $('header .close, .section').on('click', function() {
+        $('body').css({'overflow': 'auto'});
+        $('header .bg').css({'display': 'none'});
+        $('header nav').removeClass('on');
+	});	
+}); 
+
+
+

@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- script -->
+    <script src="http://code.jquery.com/jquery-1.6.3.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
+    <script>
+      $(document).ready(function () {
+        $(".slider").bxSlider();
+      });
+    </script>
+<!--
+    <script>
+      $(document).ready(function () {
+        $("#tab-content div").hide(); // Initially hide all content
+        $("#tabs li:first").attr("id", "current"); // Activate first tab
+        $("#tab-content div:first").fadeIn(); // Show first tab content
+
+        $("#tabs a").click(function (e) {
+          e.preventDefault();
+          $("#tab-content div").hide(); //Hide all content
+          $("#tabs li").attr("id", ""); //Reset id's
+          $(this).parent().attr("id", "current"); // Activate this
+          $("#" + $(this).attr("title")).fadeIn(); // Show content for current tab
+        });
+      })();
+    </script>
+-->
+    <!-- link -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="reset.css" />
+    <!-- title -->
+    <title>송지은의 portfolio</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="contents">
+        <div class="contents-inner">
+          <div class="greeting-box" id="top">
+            <p class="greeting-text en">Hi!</p>
+          </div>
+          <p class="title en">This is my profile</p>
+          <div class="profile-box">
+            <div class="photo-box">
+              <p class="profile-img"><img src="img/myprofile.jpg" alt="" /></p>
+              <p class="tape-img">
+                <img src="img/Washitape_pastelblue.png" alt="" />
+              </p>
+            </div>
+            <div class="intro-box">
+              <ul class="intro-list">
+                <li class="intro-item">
+                  <span class="en">Name</span> : 송지은
+                  <span class="en">SONG JI EUN</span>
+                </li>
+                <li class="intro-item">
+                  <span class="en">Birth</span> : 1999.03.02
+                </li>
+                <li class="intro-item">
+                  <span class="en">Address</span> : 경기도 안양시 동안구
+                </li>
+                <li class="intro-item">
+                  <span class="en">Telephone Number</span> : 010.9962.1071
+                </li>
+                <li class="intro-item">
+                  <span class="en">My Favorit</span> : 게임, 동물, 날씨 좋은 날,
+                  산책,
+                </li>
+                <li class="intro-item">
+                  <span class="en">My Hobby</span> : 게임하기, 음악듣기,
+                  쇼핑하기, 고양이 만지기
+                </li>
+              </ul>
+            </div>
+            <div class="typo-box">
+              <ul class="typo-text-list">
+                <li class="typo-text-item en">W</li>
+                <li class="typo-text-item en">H</li>
+                <li class="typo-text-item en">O</li>
+                <li class="typo-text-item en">A</li>
+                <li class="typo-text-item en">M</li>
+                <li class="typo-text-item en">I</li>
+                <li class="typo-text-item en">?</li>
+              </ul>
+            </div>
+          </div>
+          <div class="content-box">
+            <div class="myphoto-box">
+              <p class="myphoto-box-title title en">My figure</p>
+              <!-- 이미지 슬라이드 -->
+              <div class="slider-box">
+                <div class="slider">
+                  <div class="slider-img">
+                    <img src="img/myPhoto2.jpg" alt="" />
+                  </div>
+                  <div class="slider-img">
+                    <img src="img/myPhoto1.jpg" alt="" />
+                  </div>
+                  <div class="slider-img">
+                    <img src="img/myPhoto5.jpg" alt="" />
+                  </div>
+                  <div class="slider-img">
+                    <img src="img/myPhoto7.jpg" alt="" />
+                  </div>
+                  <div class="slider-img">
+                    <img src="img/myPhoto10.jpg" alt="" />
+                  </div>
+                  <div class="slider-img">
+                    <img src="img/myPhoto16.jpg" alt="" />
+                  </div>
+                  <div class="slider-img">
+                    <img src="img/myPhoto20.jpg" alt="" />
+                  </div>
+                  <div class="slider-img">
+                    <img src="img/myPhoto21.jpg" alt="" />
+                  </div>
+                  <div class="slider-img">
+                    <img src="img/23.jpg" alt="" />
+                  </div>
+                  <div class="slider-img">
+                    <img src="img/24.jpg" alt="" />
+                  </div>
+                </div>
+                <div class="slider">
+                  <div class="slider-img">
+                    <img src="img/mycat.jpg" alt="" />
+                  </div>
+                  <div class="slider-img">
+                    <img src="img/mycat3.jpg" alt="" />
+                  </div>
+                  <div class="slider-img">
+                    <img src="img/mycat4.jpg" alt="" />
+                  </div>
+                  <div class="slider-img">
+                    <img src="img/mycat5.jpg" alt="" />
+                  </div>
+                  <div class="slider-img">
+                    <img src="img/mycat6.jpg" alt="" />
+                  </div>
+                  <div class="slider-img">
+                    <img src="img/mycat8.jpg" alt="" />
+                  </div>
+                  <div class="slider-img">
+                    <img src="img/mycat9.jpg" alt="" />
+                  </div>
+                  <div class="slider-img">
+                    <img src="img/mycat10.jpg" alt="" />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="myCareer-box">
+            <p class="myCareer-box-title title en">My Career</p>
+            <div class="mySkils-box">
+              <p class="mySkils-box-title career-title en">Skils</p>
+              <div class="mySkils-box-content">
+                <ul class="mySkils-box-content-list">
+                  <li class="mySkils-box-content-item">
+                    <p class="skil-img">
+                      <img src="img/htmljscsslogo.png" alt="" />
+                    </p>
+                  </li>
+                  <li class="mySkils-box-content-item">
+                    <p class="skil-img">
+                      <img src="img/reactlogo.png" alt="" />
+                    </p>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="myWorkpiece-box">
+              <p class="myWorkpiece-box-title career-title en">Workpiece</p>
+              <ul class="myWorkpiece-box-list">
+                <li class="myWorkpiece-box-item">
+                  <a href="#">
+                    <div class="myWorkpiece-box-item-typoBox">
+                      <p class="myWorkpiece-box-item-title">
+                        북스토어 페이지 보러가기
+                      </p>
+                      <span class="myWorkpiece-box-item-text en">Click!</span>
+                    </div>
+                  </a>
+                </li>
+                <li class="myWorkpiece-box-item">
+                  <a href="./phomein/index.html">
+                    <div class="myWorkpiece-box-item-typoBox">
+                      <p class="myWorkpiece-box-item-title">
+                        포메인 페이지 보러가기
+                      </p>
+                      <span class="myWorkpiece-box-item-text en">Click!</span>
+                    </div>
+                  </a>
+                </li>
+                <li class="myWorkpiece-box-item">
+                  <a href="./daebang/index.html">
+                    <div class="myWorkpiece-box-item-typoBox">
+                      <p class="myWorkpiece-box-item-title">
+                        대방 페이지 보러가기
+                      </p>
+                      <span class="myWorkpiece-box-item-text en">Click!</span>
+                    </div>
+                  </a>
+                </li>
+                <li class="myWorkpiece-box-item">
+                  <a href="./musign/index.html">
+                    <div class="myWorkpiece-box-item-typoBox">
+                      <p class="myWorkpiece-box-item-title">
+                        뮤자인 페이지 보러가기
+                      </p>
+                      <span class="myWorkpiece-box-item-text en">Click!</span>
+                    </div>
+                  </a>
+                </li>
+                <li class="myWorkpiece-box-item">
+                  <a href="./dopda/index.html">
+                    <div class="myWorkpiece-box-item-typoBox">
+                      <p class="myWorkpiece-box-item-title">
+                        돕다 페이지 보러가기
+                      </p>
+                      <span class="myWorkpiece-box-item-text en">Click!</span>
+                    </div>
+                  </a>
+                </li>
+                <li class="myWorkpiece-box-item">
+                  <a href="./ystudio/index.html">
+                    <div class="myWorkpiece-box-item-typoBox">
+                      <p class="myWorkpiece-box-item-title">
+                        와이 스튜디오 페이지 보러가기
+                      </p>
+                      <span class="myWorkpiece-box-item-text en">Click!</span>
+                    </div>
+                  </a>
+                </li>
+                <li class="myWorkpiece-box-item">
+                  <a href="./hanhwa/index.html">
+                    <div class="myWorkpiece-box-item-typoBox">
+                      <p class="myWorkpiece-box-item-title">
+                        한화 페이지 보러가기
+                      </p>
+                      <span class="myWorkpiece-box-item-text en">Click!</span>
+                    </div>
+                  </a>
+                </li>
+                <li class="myWorkpiece-box-item">
+                  <a href="./kwon/index.html">
+                    <div class="myWorkpiece-box-item-typoBox">
+                      <p class="myWorkpiece-box-item-title">
+                        한국 소비자원 페이지 보러가기
+                      </p>
+                      <span class="myWorkpiece-box-item-text en">Click!</span>
+                    </div>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <footer id="footer">
+          <div class="footer-inner">
+            <h1 class="footer-tit en">Contact Me?</h1>
+            <div class="footer-txtBox">
+              <ul>
+                <li class="footer-txt">
+                  <span class="en">phone: 010-9962-1071</span>
+                </li>
+                <li class="footer-txt">
+                  <span class="en">email: sjy990302@naver.com</span>
+                </li>
+                <li class="footer-txt">
+                  <span class="en">github: https://github.com/jijisss</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </footer>
+        <a href="#top" class="goTop"><span class="en">top</span></a>
+      </div>
+    </div>
+  </body>
+</html>

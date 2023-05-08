@@ -1,0 +1,387 @@
+@import url("https://fonts.googleapis.com/css2?family=Gowun+Dodum&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Kaisei+Decol&display=swap");
+
+body {
+  color: rgb(58, 58, 58);
+  font-family: "Gowun Dodum", sans-serif;
+}
+.en {
+  font-family: "Kaisei Decol", serif;
+}
+.container {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+.contents {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+.contents::before {
+  position: absolute;
+  content: "";
+  top: 9%;
+  left: 21%;
+  width: 90px;
+  height: 90px;
+  border-radius: 100px;
+  background: rgb(226, 244, 249);
+}
+.contents::after {
+  content: "";
+  position: absolute;
+  top: 15%;
+  left: 40.5%;
+  width: 110px;
+  height: 110px;
+  border-radius: 100px;
+  background: rgb(132, 173, 200);
+}
+.contents-inner {
+  width: 1200px;
+  margin: 0 auto;
+  padding-top: 5rem;
+  box-sizing: border-box;
+}
+.greeting-box {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+.greeting-text {
+  position: absolute;
+  margin-top: 2rem;
+  font-size: 3rem;
+  display: inline;
+  animation-name: hi;
+  transition: 0.3s;
+  animation-duration: 0.6s;
+  animation-direction: alternate-reverse;
+  animation-iteration-count: infinite;
+}
+@keyframes hi {
+  0% {
+    top: 0px;
+  }
+  to {
+    top: 8px;
+  }
+}
+.profile-box {
+  width: 100%;
+  display: flex;
+}
+.title {
+  font-size: 3rem;
+}
+.photo-box {
+  position: relative;
+  padding-bottom: 2rem;
+}
+.tape-img {
+  top: 10%;
+  left: -8%;
+  transform: rotate(-40deg);
+  position: absolute;
+  width: 135px;
+}
+.tape-img img {
+  width: 100%;
+}
+.profile-img {
+  width: 400px;
+  margin-top: 3rem;
+}
+.profile-img img {
+  width: 100%;
+  border-radius: 10px;
+  box-shadow: 0px 8px 15px 10px rgb(246, 246, 246, 0.55);
+}
+.intro-box {
+  width: 80%;
+  margin-left: 2rem;
+  margin-top: 3rem;
+  padding-top: 4rem;
+  padding-left: 1.5rem;
+  box-sizing: border-box;
+  background-image: url(./img/note.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+.intro-list {
+  line-height: 2.28;
+}
+.intro-item {
+  font-size: 1.1rem;
+}
+.typo-box {
+  width: 40%;
+  padding-top: 3.5rem;
+  box-sizing: border-box;
+}
+.typo-text-list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.typo-text-item {
+  font-size: 3.2rem;
+  color: rgb(120, 153, 186);
+  margin-top: 5px;
+}
+.typo-text-item:nth-child(1) {
+  font-size: 4.5rem;
+}
+.content-box {
+  width: 100%;
+  margin-top: 5rem;
+  padding-top: 1rem;
+  border-top: 1px solid rgb(148, 188, 215);
+}
+.myphoto-box {
+  position: relative;
+  width: 100%;
+  margin-bottom: 5rem;
+}
+.myphoto-box::after {
+  position: absolute;
+  content: "";
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 133px;
+  height: 130px;
+  background: url(./img/light-blue-heart_.png);
+  background-repeat: no-repeat;
+}
+.slider-box {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 3rem;
+}
+.bx-wrapper {
+  width: 500px;
+  height: 650px;
+  float: left;
+  overflow: hidden;
+  border: none;
+}
+.slide-text {
+  font-size: 2rem;
+  margin-left: 1rem;
+  font-weight: bold;
+}
+.slider-img {
+  width: 500px;
+}
+.slider-img img {
+  width: 500px;
+  height: 100%;
+}
+.bx-wrapper .bx-controls-direction a {
+  width: 15px;
+  height: 70px;
+  background: #709dd8;
+  border-radius: 50px;
+}
+.myCareer-box {
+  width: 100%;
+  padding-top: 1rem;
+  border-top: 1px solid rgb(148, 188, 215);
+  padding-bottom: 8rem;
+}
+.myCareer-box-inner {
+  width: 1200px;
+  margin: 0 auto;
+  padding-top: 1rem;
+  border-top: 1px solid rgb(148, 188, 215);
+  padding-bottom: 5rem;
+}
+.mySkils-box {
+  margin-top: 5rem;
+  padding-bottom: 5rem;
+  border-bottom: 1px solid #e5e5e5;
+}
+.career-title {
+  position: relative;
+  font-size: 2rem;
+  color: rgb(135, 135, 135);
+  display: block;
+  margin-left: 10px;
+}
+.career-title::after {
+  content: "";
+  position: absolute;
+  left: -7px;
+  top: 15px;
+  width: 4px;
+  height: 4px;
+  background: rgb(156, 156, 156);
+  border-radius: 50px;
+}
+.mySkils-box-content {
+  margin-top: 2rem;
+  padding: 2rem;
+  box-shadow: 0px 8px 15px 10px rgba(246, 246, 246, 0.9);
+  border-radius: 15px;
+}
+.mySkils-box-content-list {
+  width: 100%;
+  display: flex;
+}
+.mySkils-box-content-item {
+  margin-right: 2rem;
+}
+.skil-img {
+  width: 200px;
+}
+.skil-img img {
+  width: 100%;
+}
+.mySkils-box-content-item:first-child .skil-img {
+  width: 550px;
+}
+.myWorkpiece-box {
+  margin-top: 3rem;
+}
+.myWorkpiece-box-list {
+  width: 100%;
+  margin-top: 2rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.myWorkpiece-box-item {
+  position: relative;
+  width: 48%;
+  height: 300px;
+  border-radius: 15px;
+  box-shadow: 0px 8px 15px 10px rgba(246, 246, 246, 0.9);
+  margin: 1.5rem 0;
+}
+.myWorkpiece-box-item:first-child {
+  background-image: url(./img/bookstore.png);
+  background-size: contain;
+}
+.myWorkpiece-box-item:nth-child(2) {
+  background-image: url(./img/phomein.png);
+  background-size: cover;
+  background-position: 50% 50%;
+}
+.myWorkpiece-box-item:nth-child(3) {
+  background-image: url(./img/daebang.png);
+  background-size: cover;
+  background-position: 50% 0%;
+}
+.myWorkpiece-box-item:nth-child(4) {
+  background-image: url(./img/musign.png);
+  background-size: cover;
+  background-position: 50% 0%;
+}
+.myWorkpiece-box-item:nth-child(5) {
+  background-image: url(./img/dopda.png);
+  background-size: cover;
+  background-position: 50% 0%;
+}
+.myWorkpiece-box-item:nth-child(6) {
+  background-image: url(./img/ystudio.png);
+  background-size: cover;
+  background-position: 50% 0%;
+}
+.myWorkpiece-box-item:nth-child(7) {
+  background-image: url(./img/hanhwa.png);
+  background-size: cover;
+  background-position: 50% 0%;
+}
+.myWorkpiece-box-item:nth-child(8) {
+  background-image: url(./img/kwon.png);
+  background-size: cover;
+  background-position: 50% 0%;
+}
+.myWorkpiece-box-item-typoBox {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  flex-direction: column;
+  line-height: 1.5;
+  text-align: center;
+  color: #fff;
+  font-size: 1.6rem;
+  font-family: "Gowun Dodum", sans-serif;
+  display: none;
+  z-index: 100;
+}
+.myWorkpiece-box-item-text {
+  font-size: 2.5rem;
+}
+.myWorkpiece-box-item::before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.55);
+  position: absolute;
+  left: 0;
+  top: 0;
+  opacity: 0;
+  transition: all 0.3s;
+  z-index: 1;
+  border-radius: 15px;
+}
+.myWorkpiece-box-item:hover::before {
+  opacity: 1;
+  transition: 0.4s;
+}
+.myWorkpiece-box-item:hover .myWorkpiece-box-item-typoBox {
+  display: block;
+}
+#footer {
+  margin-top: 2rem;
+  background: rgb(188, 204, 218);
+}
+.footer-inner {
+  width: 1200px;
+  margin: 0 auto;
+  padding: 12rem 0 20rem;
+  box-sizing: border-box;
+  position: relative;
+}
+.footer-tit {
+  font-size: 5rem;
+  color: #000;
+  text-align: center;
+}
+.footer-txtBox {
+  display: inline-block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  margin-top: 5rem;
+}
+.footer-txt {
+  font-size: 1.5rem;
+  margin: 0.9rem 0;
+  color: #282828;
+}
+.goTop {
+  position: absolute;
+  right: 50px;
+  bottom: 470px;
+  color: #fff;
+  font-size: 1.8rem;
+  width: 70px;
+  height: 70px;
+  border: 1px solid #fff;
+  border-radius: 50%;
+}
+.goTop span {
+  position: absolute;
+  top: 47%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.goTop:hover {
+  background: rgba(240, 240, 240, 0.145);
+}
