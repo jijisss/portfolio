@@ -228,18 +228,19 @@ body {
 .mySkils-box-content-list {
   width: 100%;
   display: flex;
+  align-items: center;
 }
 .mySkils-box-content-item {
   margin-right: 2rem;
 }
+.mySkils-box-content-item:nth-child(1) .skil-img {
+  width: 360px;
+}
 .skil-img {
-  width: 200px;
+  width: 90px;
 }
 .skil-img img {
   width: 100%;
-}
-.mySkils-box-content-item:first-child .skil-img {
-  width: 550px;
 }
 .myWorkpiece-box {
   margin-top: 3rem;
